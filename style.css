@@ -1,0 +1,195 @@
+body, input
+{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+input {border-radius: 5px;}
+
+body
+{
+    background-color: #f0f0f0;
+}
+
+.common_container
+{
+    background-color: #FFF;
+    margin: 0 15%;
+    min-height: 100vh;
+    position: relative;
+    box-shadow: -5px 0 10px #31331331, 5px 0 10px #31331331;
+}
+
+header
+{
+    background-color: #71a2fd;
+    top: 0;
+    padding: 2em;
+    z-index: 1;
+    position: sticky;
+    max-width: inherit;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+header input
+{
+    width: 55%;
+    border: none;
+    height: 2em;
+    font-size: 1em;
+    padding: 0 1em;
+}
+
+header .controls
+{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+header .control
+{
+    border-radius: 25%;
+    text-align: center;
+    height: 3em;
+    width: 4em;
+    filter: brightness(0.9);
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .control:hover
+{
+    cursor: pointer;
+    filter: brightness(1);
+    transition: 0.2s;
+}
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em;
+
+    justify-content: space-evenly;
+}
+
+a.note, header .control, input
+{
+    text-decoration: none;
+    box-shadow: 0.15em 0.4em 0.35em #31331331;
+}
+
+.note
+{
+    width: 25%;
+    margin: 1em;
+    padding: 0.5em 1.5em;
+    max-height: 25em;
+
+    color: #333;
+    background-color: #eee;
+    border-radius: 1em;
+}
+
+.note.done
+{
+    text-decoration: line-through;
+    filter: brightness(0.85);
+}
+
+.note.important { border-right: 0.5em #ce2525 solid; }
+
+.note.important h3
+{
+    color: #ce2525;
+    text-decoration: underline 2px #ce2525;
+}
+
+.note.common { border-right: 0.5em #71a2fd solid; }
+
+.note.finance { border-right: 0.5em rgb(98, 165, 98) solid; }
+
+.note:hover, .note:focus
+{
+    color: #000;
+    background-color: #d7e7fd;
+}
+
+.note:focus, .control:focus, address a:focus
+{
+    outline-style: solid;
+    outline-width: 2px;
+    outline-color: #0066ff;
+}
+
+@media (max-width: 1100px)
+{
+    .common_container
+    {
+        margin: 0;
+    }
+
+    .note
+    {
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .control
+    {
+        width: auto;
+    }
+
+    header input, footer {font-size: 1.2em;}
+
+    header input
+    {
+        width: 50%;
+    }
+
+    header
+    {
+        padding: 1em;
+    }
+
+}
+
+@media (max-width: 600px)
+{
+    *
+    {
+        font-size: 0.97em;
+    }
+
+    header input
+    {
+        display: none;
+    }
+}
+
+footer
+{
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box;
+    background-color: #71a2fd;
+    color: #fefefe;
+    font-size: 1.2em;
+}
+
+footer a
+{
+    text-decoration: none;
+    color: #551dee;
+}
+
+footer address
+{
+    display: inline;
+}
